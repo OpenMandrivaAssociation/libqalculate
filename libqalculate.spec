@@ -13,7 +13,6 @@ Group:		System/Libraries
 Url:		https://qalculate.github.io/
 Source0:	https://github.com/Qalculate/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires:	doxygen
 BuildRequires:	gmp-devel
 BuildRequires:	readline-devel
 BuildRequires:	intltool
