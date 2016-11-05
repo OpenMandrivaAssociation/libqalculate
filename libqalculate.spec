@@ -6,14 +6,13 @@
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	0.9.9
+Version:	0.9.10
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
 Url:		https://qalculate.github.io/
-Source0:	https://github.com/Qalculate/%{name}/archive/%{name}-%{version}.tar.gz
+Source0:	https://github.com/Qalculate/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires:	doxygen
 BuildRequires:	gmp-devel
 BuildRequires:	readline-devel
 BuildRequires:	intltool
@@ -98,10 +97,6 @@ Data files for %{name}.
 %setup -q
 
 %build
-pushd docs/reference
-doxygen
-popd
-
 autoreconf -fiv
 %configure
 %make
