@@ -98,10 +98,6 @@ Data files for %{name}.
 %setup -q
 
 %build
-pushd docs/reference
-doxygen
-popd
-
 autoreconf -fiv
 %configure
 %make
