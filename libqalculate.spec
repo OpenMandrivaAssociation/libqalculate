@@ -1,19 +1,20 @@
 %define sname	qalc
 %define bname	qalculate
-%define major	10
+%define major	12
 %define libname	%mklibname %{bname} %{major}
 %define devname	%mklibname %{bname} -d
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	2.0.0
+Version:	2.1.0
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
 Url:		https://qalculate.github.io/
-Source0:	https://github.com/Qalculate/%{name}/releases/download/v%{version}a/%{name}-%{version}.tar.gz
+Source0:	https://github.com/Qalculate/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	doxygen
 BuildRequires:	gmp-devel
+BuildRequires:	mpfr-devel
 BuildRequires:	readline-devel
 BuildRequires:	intltool
 BuildRequires:	perl(XML::Parser)
@@ -21,6 +22,7 @@ BuildRequires:	pkgconfig(cln)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(ncurses)
+BuildRequires:	pkgconfig(libcurl)
 
 %description
 Libraries needed by Qalculate!.
@@ -84,17 +86,22 @@ Summary:	Data files for %{name}
 Group:		System/Libraries
 Requires:	%{libname} = %{version}-%{release}
 BuildArch:	noarch
+Obsoletes:	%mklibname qalculate 8
+Obsoletes:	%mklibname qalculate 9
+Obsoletes:	%mklibname qalculate 10
 
 %description data
 Data files for %{name}.
 
 %files data -f %{name}.lang
 %{_datadir}/qalculate/*.xml
+%{_datadir}/qalculate/*.json
 
 #----------------------------------------------------------------------------
 
 %prep
 %setup -q
+NOCONFIGURE=1 ./autogen.sh
 
 %build
 # docs
@@ -103,7 +110,6 @@ doxygen
 popd
 
 # binaries
-autoreconf -fiv
 %configure
 %make
 
