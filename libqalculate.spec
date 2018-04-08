@@ -14,15 +14,16 @@ Url:		https://qalculate.github.io/
 Source0:	https://github.com/Qalculate/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	doxygen
 BuildRequires:	gmp-devel
-BuildRequires:	mpfr-devel
 BuildRequires:	readline-devel
 BuildRequires:	intltool
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	pkgconfig(cln)
 BuildRequires:	pkgconfig(glib-2.0)
-BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(ncurses)
+BuildRequires:	pkgconfig(icu-uc)
 BuildRequires:	pkgconfig(libcurl)
+BuildRequires:	pkgconfig(libxml-2.0)
+BuildRequires:	pkgconfig(mpfr)
+BuildRequires:	pkgconfig(ncurses)
 
 %description
 Libraries needed by Qalculate!.
