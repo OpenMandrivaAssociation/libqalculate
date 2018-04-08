@@ -112,7 +112,7 @@ popd
 
 # binaries
 %configure
-%make
+%make_build
 
 %install
 %makeinstall_std
