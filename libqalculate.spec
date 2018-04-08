@@ -1,6 +1,6 @@
 %define sname	qalc
 %define bname	qalculate
-%define major	16
+%define major	15
 %define libname	%mklibname %{bname} %{major}
 %define devname	%mklibname %{bname} -d
 
