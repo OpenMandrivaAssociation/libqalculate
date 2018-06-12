@@ -6,7 +6,7 @@
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	2.5.0
+Version:	2.6.0
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
