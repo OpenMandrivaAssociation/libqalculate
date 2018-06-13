@@ -1,17 +1,17 @@
 %define sname	qalc
 %define bname	qalculate
-%define major	16
+%define major	18
 %define libname	%mklibname %{bname} %{major}
 %define devname	%mklibname %{bname} -d
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	2.6.0
+Version:	2.6.0b
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
 Url:		https://qalculate.github.io/
-Source0:	https://github.com/Qalculate/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/Qalculate/libqalculate/archive/v2.6.0b.tar.gz
 BuildRequires:	doxygen
 BuildRequires:	gmp-devel
 BuildRequires:	readline-devel
@@ -103,6 +103,7 @@ Data files for %{name}.
 %prep
 %setup -q
 NOCONFIGURE=1 ./autogen.sh
+autoheader
 
 %build
 # docs
