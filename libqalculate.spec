@@ -7,7 +7,7 @@
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
 Version:	2.6.0b
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Libraries
 Url:		https://qalculate.github.io/
@@ -66,6 +66,7 @@ Shared library for Qalculate!.
 Summary:	Development files for %{name}
 Group:		Development/Other
 Requires:	%{libname} = %{version}-%{release}
+Requires:	gmp-devel
 Provides:	%{bname}-devel = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 
