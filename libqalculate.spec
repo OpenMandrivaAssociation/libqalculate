@@ -1,12 +1,12 @@
 %define sname	qalc
 %define bname	qalculate
-%define major	18
+%define major	19
 %define libname	%mklibname %{bname} %{major}
 %define devname	%mklibname %{bname} -d
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	2.6.1
+Version:	2.6.2
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
