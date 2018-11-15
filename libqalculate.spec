@@ -1,13 +1,15 @@
 %define sname	qalc
 %define bname	qalculate
-%define major	19
+%define major	20
 %define libname	%mklibname %{bname} %{major}
 %define devname	%mklibname %{bname} -d
+# For obsoletion
+%define lib19name	%mklibname %{bname} 19
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	2.6.2
-Release:	2
+Version:	2.8.1
+Release:	1
 License:	GPLv2+
 Group:		System/Libraries
 Url:		https://qalculate.github.io/
@@ -53,6 +55,7 @@ This package provides the CLI frontend.
 Group:		System/Libraries
 Summary:	The library for qalculate
 Requires:	%{name}-data = %{version}-%{release}
+Obsoletes:	%{lib19name} < %{EVRD}
 
 %description -n %{libname}
 Shared library for Qalculate!.
