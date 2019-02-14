@@ -8,7 +8,7 @@
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	2.8.2
+Version:	2.9.0
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
