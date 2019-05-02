@@ -1,6 +1,6 @@
 %define sname	qalc
 %define bname	qalculate
-%define major	20
+%define major	21
 %define libname	%mklibname %{bname} %{major}
 %define devname	%mklibname %{bname} -d
 # For obsoletion
@@ -8,7 +8,7 @@
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	2.9.0
+Version:	3.1.0
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
@@ -101,7 +101,6 @@ Data files for %{name}.
 
 %files data -f %{name}.lang
 %{_datadir}/qalculate/*.xml
-%{_datadir}/qalculate/*.json
 
 #----------------------------------------------------------------------------
 
