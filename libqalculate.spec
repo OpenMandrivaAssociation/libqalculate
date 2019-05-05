@@ -5,11 +5,12 @@
 %define devname	%mklibname %{bname} -d
 # For obsoletion
 %define lib19name	%mklibname %{bname} 19
+%define lib20name	%mklibname %{bname} 20
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
 Version:	3.1.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Libraries
 Url:		https://qalculate.github.io/
@@ -56,6 +57,7 @@ Group:		System/Libraries
 Summary:	The library for qalculate
 Requires:	%{name}-data = %{version}-%{release}
 Obsoletes:	%{lib19name} < %{EVRD}
+Obsoletes:	%{lib20name} < %{EVRD}
 
 %description -n %{libname}
 Shared library for Qalculate!.
@@ -105,22 +107,22 @@ Data files for %{name}.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 NOCONFIGURE=1 ./autogen.sh
 autoheader
 
 %build
 # docs
-pushd docs/reference
+cd docs/reference
 doxygen
-popd
+cd -
 
 # binaries
 %configure
 %make_build
 
 %install
-%makeinstall_std
+%make_install
 
 # locales
 %find_lang %{name}
