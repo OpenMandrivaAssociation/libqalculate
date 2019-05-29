@@ -9,12 +9,12 @@
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	3.1.0
-Release:	2
+Version:	3.2.0
+Release:	1
 License:	GPLv2+
 Group:		System/Libraries
 Url:		https://qalculate.github.io/
-Source0:	https://github.com/Qalculate/libqalculate/archive/v%{version}.tar.gz
+Source0:        https://github.com/Qalculate/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	doxygen
 BuildRequires:	gmp-devel
 BuildRequires:	readline-devel
@@ -126,4 +126,3 @@ cd -
 
 # locales
 %find_lang %{name}
-
