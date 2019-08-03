@@ -1,5 +1,2 @@
-removed_sources:
-  v3.1.0.tar.gz: ed911375b5c77e8e7bb81417f6837840c4c885f1
 sources:
-  libqalculate-3.2.0.tar.gz:  43a299db948e201f5d74793994094d2dccf961d4
-
+  libqalculate-3.3.0.tar.gz: 4054b08dc4a1cacbc159805e0d5f5e51a9c93ea8
