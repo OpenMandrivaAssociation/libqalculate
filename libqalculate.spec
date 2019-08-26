@@ -55,7 +55,8 @@ This package provides the CLI frontend.
 %package -n %{libname}
 Group:		System/Libraries
 Summary:	The library for qalculate
-Requires:	%{name}-data = %{version}-%{release}
+Requires:	%{name}-data = %{EVRD}
+Obsoletes:	%{name}-data < %{EVRD}
 Obsoletes:	%{lib19name} < %{EVRD}
 Obsoletes:	%{lib20name} < %{EVRD}
 
