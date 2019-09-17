@@ -9,7 +9,7 @@
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	3.3.0
+Version:	3.4.0
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
@@ -104,6 +104,7 @@ Data files for %{name}.
 
 %files data -f %{name}.lang
 %{_datadir}/qalculate/*.xml
+%{_mandir}/man1/*
 
 #----------------------------------------------------------------------------
 
