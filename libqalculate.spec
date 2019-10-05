@@ -1,20 +1,20 @@
-%define sname	qalc
-%define bname	qalculate
-%define major	21
-%define libname	%mklibname %{bname} %{major}
-%define devname	%mklibname %{bname} -d
+%define sname qalc
+%define bname qalculate
+%define major 21
+%define libname %mklibname %{bname} %{major}
+%define devname %mklibname %{bname} -d
 # For obsoletion
-%define lib19name	%mklibname %{bname} 19
-%define lib20name	%mklibname %{bname} 20
+%define lib19name %mklibname %{bname} 19
+%define lib20name %mklibname %{bname} 20
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
 Version:	3.4.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Libraries
 Url:		https://qalculate.github.io/
-Source0:        https://github.com/Qalculate/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/Qalculate/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	doxygen
 BuildRequires:	gmp-devel
 BuildRequires:	readline-devel
@@ -36,7 +36,7 @@ Libraries needed by Qalculate!.
 %package -n %{sname}
 Group:		System/Libraries
 Summary:	CLI frontend for Qalculate!
-Requires:	%{libname} = %{version}-%{release}
+Requires:	%{libname} = %{EVRD}
 
 %description -n %{sname}
 Qalculate! is a multi-purpose desktop calculator for GNU/Linux. It is small
@@ -59,6 +59,9 @@ Requires:	%{name}-data = %{EVRD}
 Obsoletes:	%{name}-data < %{EVRD}
 Obsoletes:	%{lib19name} < %{EVRD}
 Obsoletes:	%{lib20name} < %{EVRD}
+Obsoletes:	%{mklibname qalculate 8} < %{EVRD}
+Obsoletes:	%{mklibname qalculate 9} < %{EVRD}
+Obsoletes:	%{mklibname qalculate 10} < %{EVRD}
 
 %description -n %{libname}
 Shared library for Qalculate!.
@@ -71,7 +74,7 @@ Shared library for Qalculate!.
 %package -n %{devname}
 Summary:	Development files for %{name}
 Group:		Development/Other
-Requires:	%{libname} = %{version}-%{release}
+Requires:	%{libname} = %{EVRD}
 Requires:	gmp-devel
 Requires:	pkgconfig(mpfr)
 Provides:	%{bname}-devel = %{version}-%{release}
@@ -93,11 +96,7 @@ Headers and development files for Qalculate!.
 %package data
 Summary:	Data files for %{name}
 Group:		System/Libraries
-Requires:	%{libname} = %{version}-%{release}
 BuildArch:	noarch
-Obsoletes:	%mklibname qalculate 8
-Obsoletes:	%mklibname qalculate 9
-Obsoletes:	%mklibname qalculate 10
 
 %description data
 Data files for %{name}.
