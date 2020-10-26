@@ -103,6 +103,7 @@ Data files for %{name}.
 
 %files data -f %{name}.lang
 %{_datadir}/qalculate/*.xml
+%{_datadir}/qalculate/rates.json
 %{_mandir}/man1/*
 
 #----------------------------------------------------------------------------
