@@ -6,11 +6,12 @@
 # For obsoletion
 %define lib19name %mklibname %{bname} 19
 %define lib20name %mklibname %{bname} 20
+%define lib21name %mklibname %{bname} 21
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
 Version:	3.20.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Libraries
 Url:		https://qalculate.github.io/
@@ -55,10 +56,10 @@ This package provides the CLI frontend.
 %package -n %{libname}
 Group:		System/Libraries
 Summary:	The library for qalculate
-Requires:	%{name}-data = %{EVRD}
-Obsoletes:	%{name}-data < %{EVRD}
+Requires:	%{name}-data >= %{EVRD}
 Obsoletes:	%{lib19name} < %{EVRD}
 Obsoletes:	%{lib20name} < %{EVRD}
+Obsoletes:	%{lib21name} < %{EVRD}
 Obsoletes:	%{mklibname qalculate 8} < %{EVRD}
 Obsoletes:	%{mklibname qalculate 9} < %{EVRD}
 Obsoletes:	%{mklibname qalculate 10} < %{EVRD}
