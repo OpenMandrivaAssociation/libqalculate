@@ -1,16 +1,17 @@
 %define sname qalc
 %define bname qalculate
 %define major 22
-%define libname %mklibname %{bname} %{major}
+%define libname %mklibname %{bname}
 %define devname %mklibname %{bname} -d
 # For obsoletion
 %define lib19name %mklibname %{bname} 19
 %define lib20name %mklibname %{bname} 20
 %define lib21name %mklibname %{bname} 21
+%define lib22name %mklibname %{bname} 22
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	4.5.1
+Version:	4.6.0
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
@@ -60,6 +61,7 @@ Requires:	%{name}-data >= %{EVRD}
 Obsoletes:	%{lib19name} < %{EVRD}
 Obsoletes:	%{lib20name} < %{EVRD}
 Obsoletes:	%{lib21name} < %{EVRD}
+Obsoletes:	%{lib22name} < %{EVRD}
 Obsoletes:	%{mklibname qalculate 8} < %{EVRD}
 Obsoletes:	%{mklibname qalculate 9} < %{EVRD}
 Obsoletes:	%{mklibname qalculate 10} < %{EVRD}
