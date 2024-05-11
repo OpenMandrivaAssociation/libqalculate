@@ -1,6 +1,6 @@
 %define sname qalc
 %define bname qalculate
-%define major 22
+%define major 23
 %define libname %mklibname %{bname}
 %define devname %mklibname %{bname} -d
 # For obsoletion
