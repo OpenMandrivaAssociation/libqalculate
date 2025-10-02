@@ -11,7 +11,7 @@
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	5.6.0
+Version:	5.7.0
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
@@ -114,16 +114,8 @@ Data files for %{name}.
 
 %prep
 %autosetup -p1
-NOCONFIGURE=1 ./autogen.sh
-autoheader
 
 %build
-# docs
-cd docs/reference
-doxygen
-cd -
-
-# binaries
 %configure
 %make_build
 
