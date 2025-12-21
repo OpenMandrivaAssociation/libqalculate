@@ -17,6 +17,11 @@ License:	GPLv2+
 Group:		System/Libraries
 Url:		https://qalculate.github.io/
 Source0:	https://github.com/Qalculate/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	doxygen
 BuildRequires:  graphviz
 BuildRequires:	gmp-devel
