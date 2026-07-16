@@ -35,7 +35,7 @@ BuildRequires:	pkgconfig(libcurl)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(mpfr)
 BuildRequires:	pkgconfig(ncurses)
-BuildRequires:	lib64atomic1
+BuildRequires:	atomic-devel
 # aarch64 does not have devel(libatomic)
 
 %description
