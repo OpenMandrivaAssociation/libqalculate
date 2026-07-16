@@ -35,7 +35,8 @@ BuildRequires:	pkgconfig(libcurl)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(mpfr)
 BuildRequires:	pkgconfig(ncurses)
-BuildRequires:	devel(libatomic)
+BuildRequires:	lib64atomic1
+# aarch64 does not have devel(libatomic)
 
 %description
 Libraries needed by Qalculate!.
