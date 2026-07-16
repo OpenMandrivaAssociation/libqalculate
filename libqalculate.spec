@@ -11,7 +11,7 @@
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	5.10.0
+Version:	5.12.0
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
@@ -35,6 +35,7 @@ BuildRequires:	pkgconfig(libcurl)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(mpfr)
 BuildRequires:	pkgconfig(ncurses)
+BuildRequires:	devel(libatomic)
 
 %description
 Libraries needed by Qalculate!.
