@@ -11,12 +11,15 @@
 
 Summary:	The library for Qalculate!
 Name:	 	libqalculate
-Version:	5.13.0
+Version:	5.13.2
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
 Url:		https://qalculate.github.io/
-Source0:	https://github.com/Qalculate/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
+# 5.13.2 is tagged as a Windows-only update and has no release tarball.
+# Build the 5.13.1 release plus the v5.13.2 source diff.
+Source0:	https://github.com/Qalculate/%{name}/releases/download/v5.13.1/%{name}-5.13.1.tar.gz
+Patch0:		libqalculate-5.13.2.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	slibtool
@@ -119,7 +122,9 @@ Data files for %{name}.
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n %{name}-5.13.1
+# The 5.13.1 release scripts still advertise 5.13.1. Report this version.
+sed -i -e 's/5\.13\.1/5.13.2/g' configure configure.ac
 
 %build
 %configure
